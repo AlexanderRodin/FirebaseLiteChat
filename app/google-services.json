@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "843846112854",
+    "firebase_url": "https://fir-litechat-default-rtdb.firebaseio.com",
+    "project_id": "fir-litechat",
+    "storage_bucket": "fir-litechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843846112854:android:01878be11f9da5445b0df7",
+        "android_client_info": {
+          "package_name": "com.example.firebaselitechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843846112854-qinveh2j2eo5g4fkf1vhpos014vun69r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhoAKYP4co0FuUnSqWCf6KX_lRB9hwKHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843846112854-qinveh2j2eo5g4fkf1vhpos014vun69r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
