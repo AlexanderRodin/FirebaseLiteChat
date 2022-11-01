@@ -1,41 +1,62 @@
 package com.example.firebaselitechat
 
-import android.content.ContentValues.TAG
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
+import com.example.firebaselitechat.databinding.ActivityMainBinding
+import com.example.firebaselitechat.utils.LOGIN
+import com.example.firebaselitechat.utils.PASSWORD
+import com.example.firebaselitechat.utils.REPOSITORY
+import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        // Write a message to the database
-        val database = Firebase.database
-        val myRef = database.getReference("message").child("Sergey")
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        myRef.setValue("Hello, World!")
+        binding.signOut.setOnClickListener {
+            signOut(this)
+        }
 
-        myRef.addValueEventListener(object: ValueEventListener {
+//TODO ADD MESSAGE
+//        val myRef = database.getReference("message")
+//        binding.buttonSend.setOnClickListener {
+//            myRef.setValue(binding.edMessage.text.toString())
+//        }
+//        onChangeListener(myRef)
 
+    }
+
+    private fun signOut(context: Context) {
+        REPOSITORY.signOut()
+        LOGIN = ""
+        PASSWORD = ""
+        openActivity(context, SignInActivity::class.java)
+    }
+
+    private fun onChangeListener(myRef: DatabaseReference) {
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                val value = snapshot.getValue<String>()
-                Log.d(TAG, "Value is: " + value)
+                binding.apply {
+                    rcView.append("\n")
+                    rcView.append("Alexander: ${snapshot.value.toString()}")
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.w(TAG, "Failed to read value.", error.toException())
+                Log.d("checkData", "Database read error!")
             }
 
         })
     }
 
-
+    private fun <T> openActivity(context: Context, it: Class<T>) {
+        val intent = Intent(context, it)
+        startActivity(intent)
+    }
 }

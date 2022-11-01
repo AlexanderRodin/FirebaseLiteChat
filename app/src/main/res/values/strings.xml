@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">FirebaseLiteChat</string>
+
+    <string name="main_activity_sign_out_button">Sign out</string>
+    <string name="main_activity_send_button">Send</string>
+    <string name="main_activity_edit_text_hint">Message</string>
+    <string name="main_activity_text_view_text"> </string>
+
+    <string name="register_activity_edit_text_email_hint">e-mail</string>
+    <string name="register_activity_edit_text_password_hint">password</string>
+    <string name="register_activity_text_view_info_text">Enter login and password:</string>
+    <string name="register_activity_button_create_user_text">Create user</string>
+
+    <string name="sign_in_activity_edit_text_email_text">e-mail</string>
+    <string name="sign_in_activity_edit_text_password_text">password</string>
+    <string name="sign_in_activity_button_sign_in_text">Sign in</string>
+    <string name="sign_in_activity_text_view_info_text">Enter login and password:</string>
+    <string name="sign_in_activity_text_view_create_new_user_text">Create new user</string>
 </resources>

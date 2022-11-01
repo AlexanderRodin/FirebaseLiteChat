@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <EditText
+        android:id="@+id/email_sign_in_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/sign_in_activity_edit_text_email_text"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/text_sign_in_activity"
+        app:layout_constraintStart_toStartOf="@+id/text_sign_in_activity"
+        app:layout_constraintTop_toBottomOf="@+id/text_sign_in_activity" />
+
+    <EditText
+        android:id="@+id/password_sign_in_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/sign_in_activity_edit_text_password_text"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_sign_in_activity"
+        app:layout_constraintStart_toStartOf="@+id/email_sign_in_activity"
+        app:layout_constraintTop_toBottomOf="@+id/email_sign_in_activity" />
+
+    <Button
+        android:id="@+id/button_sign_in_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_in_activity_button_sign_in_text"
+        app:layout_constraintEnd_toEndOf="@+id/password_sign_in_activity"
+        app:layout_constraintStart_toStartOf="@+id/password_sign_in_activity"
+        app:layout_constraintTop_toBottomOf="@+id/password_sign_in_activity" />
+
+    <TextView
+        android:id="@+id/text_sign_in_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/sign_in_activity_text_view_info_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/create_new_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/sign_in_activity_text_view_create_new_user_text"
+        app:layout_constraintEnd_toEndOf="@+id/button_sign_in_activity"
+        app:layout_constraintStart_toStartOf="@+id/button_sign_in_activity"
+        app:layout_constraintTop_toBottomOf="@+id/button_sign_in_activity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

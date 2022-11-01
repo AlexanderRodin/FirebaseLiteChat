@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:id="@+id/email_register_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/register_activity_edit_text_email_hint"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/text_register_activity"
+        app:layout_constraintStart_toStartOf="@+id/text_register_activity"
+        app:layout_constraintTop_toBottomOf="@+id/text_register_activity" />
+
+    <EditText
+        android:id="@+id/password_register_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/register_activity_edit_text_password_hint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_register_activity"
+        app:layout_constraintStart_toStartOf="@+id/email_register_activity"
+        app:layout_constraintTop_toBottomOf="@+id/email_register_activity" />
+
+    <Button
+        android:id="@+id/sign_in_button_register_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/register_activity_button_create_user_text"
+        app:layout_constraintEnd_toEndOf="@+id/password_register_activity"
+        app:layout_constraintStart_toStartOf="@+id/password_register_activity"
+        app:layout_constraintTop_toBottomOf="@+id/password_register_activity" />
+
+    <TextView
+        android:id="@+id/text_register_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/register_activity_text_view_info_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
